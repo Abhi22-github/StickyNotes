@@ -1,29 +1,32 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+
     <id>com.roaa.StickyNotes</id>
+    <name>Sticky Notes</name>
 
-    <!-- Public plugin name should be written in Title Case.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
-    <name>StickyNotes</name>
+    <vendor email="satpute.abhi22@gmail.com">Abhishek Satpute</vendor>
 
-    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://www.yourcompany.com">YourCompany</vendor>
-
-    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description><![CDATA[
-        Enter short description for your plugin here.<br>
-        <em>most HTML tags may be used</em>
-    ]]></description>
+  <h2>Code Context Sticky Notes</h2>
+  <p>Stop polluting your source code with temporary TODOs and mental breadcrumbs.
+  <b>Code Context Sticky Notes</b> allows you to attach private, virtual notes directly to
+  specific lines of code in the editor gutter.</p>
 
-    <!-- Product and plugin compatibility requirements.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+  <h3>Key Features:</h3>
+  <ul>
+    <li><b>Private Context:</b> Notes are stored locally in your .idea folder—they never get committed to Git.</li>
+    <li><b>Instant Access:</b> Alt+Click on the line gutter to create a note instantly.</li>
+    <li><b>Gutter Visuals:</b> See your notes at a glance with sleek gutter icons and hover tooltips.</li>
+    <li><b>Non-Intrusive:</b> Keep your codebase clean while maintaining a high-detail mental map of complex logic.</li>
+  </ul>
+
+  <p>Perfect for debugging sessions, complex refactors, or leaving personal reminders during a long development sprint.</p>
+]]></description>
+
+
     <depends>com.intellij.modules.platform</depends>
-
-    <!-- Extension points defined by the plugin.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+
 </idea-plugin>
