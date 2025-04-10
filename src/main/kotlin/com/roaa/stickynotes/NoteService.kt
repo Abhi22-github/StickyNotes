@@ -14,6 +14,10 @@ class NoteService : PersistentStateComponent<NoteService.State> {
     override fun getState() = myState
     override fun loadState(state: State) { myState = state }
 
+    fun addNote(note: Note) = myState.notes.add(note)
+    fun removeNote(note: Note) = myState.notes.remove(note)
+    fun getNotesForFile(path: String) = myState.notes.filter { it.filePath == path }
+
     companion object {
         fun getInstance(project: Project): NoteService = project.getService(NoteService::class.java)
     }
