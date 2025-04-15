@@ -40,7 +40,7 @@ class NoteMouseListener : EditorMouseListener {
                 ApplicationManager.getApplication().invokeLater {
                     // This triggers the markup model to redraw with the new GutterRenderer
                     editor.markupModel.addLineHighlighter(line, 0, null).apply {
-                        gutterIconRenderer = NoteGutterRenderer(note)
+                        gutterIconRenderer = NoteGutterRenderer(note,editor)
                     }
                 }
             }

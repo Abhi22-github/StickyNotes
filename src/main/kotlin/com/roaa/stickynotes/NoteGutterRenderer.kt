@@ -3,11 +3,14 @@ package com.roaa.stickynotes
 import com.intellij.openapi.actionSystem.*
 import com.intellij.openapi.editor.markup.GutterIconRenderer
 import com.intellij.icons.AllIcons
+import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.DumbAwareAction
 import javax.swing.Icon
 
-class NoteGutterRenderer(private val note: Note,
-                         private val editor: Editor) : GutterIconRenderer() {
+class NoteGutterRenderer(
+    private val note: Note,
+    private val editor: Editor
+) : GutterIconRenderer() {
     override fun getIcon(): Icon = AllIcons.Nodes.EmptyNode
     override fun getTooltipText(): String = note.content
     override fun hashCode(): Int = note.hashCode()
