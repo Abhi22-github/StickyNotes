@@ -26,7 +26,7 @@
 
     <depends>com.intellij.modules.platform</depends>
     <extensions defaultExtensionNs="com.intellij">
-
+        <editorFactoryListener implementation="com.roaa.stickynotes.NoteEditorStartup"/>
     </extensions>
 
 </idea-plugin>

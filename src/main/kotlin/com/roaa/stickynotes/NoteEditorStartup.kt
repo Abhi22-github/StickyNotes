@@ -36,7 +36,7 @@ fun applyNotesToEditor(editor: com.intellij.openapi.editor.Editor) {
 
     notes.forEach { note ->
         editor.markupModel.addLineHighlighter(note.line, 0, null).apply {
-            gutterIconRenderer = NoteGutterRenderer(note)
+            gutterIconRenderer = NoteGutterRenderer(note, editor)
         }
     }
 }

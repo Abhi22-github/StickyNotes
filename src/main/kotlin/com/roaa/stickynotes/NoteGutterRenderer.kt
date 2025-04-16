@@ -11,7 +11,7 @@ class NoteGutterRenderer(
     private val note: Note,
     private val editor: Editor
 ) : GutterIconRenderer() {
-    override fun getIcon(): Icon = AllIcons.Nodes.EmptyNode
+    override fun getIcon(): Icon = AllIcons.Actions.AddToDictionary
     override fun getTooltipText(): String = note.content
     override fun hashCode(): Int = note.hashCode()
     override fun equals(other: Any?): Boolean = other is NoteGutterRenderer && other.note == note
