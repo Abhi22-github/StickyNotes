@@ -2,7 +2,7 @@
 <idea-plugin>
 
     <id>com.roaa.StickyNotes</id>
-    <name>Sticky Notes</name>
+    <name>Code Context Sticky Notes</name>
 
     <vendor email="satpute.abhi22@gmail.com">Abhishek Satpute</vendor>
 
@@ -28,5 +28,13 @@
     <extensions defaultExtensionNs="com.intellij">
         <editorFactoryListener implementation="com.roaa.stickynotes.NoteEditorStartup"/>
     </extensions>
+
+    <actions>
+        <action id="com.roaa.stickynotes.AddNoteGutter"
+                class="com.roaa.stickynotes.AddNoteGutterAction"
+                text="Add Sticky Note...">
+            <add-to-group group-id="EditorGutterPopupMenu" anchor="first"/>
+        </action>
+    </actions>
 
 </idea-plugin>
